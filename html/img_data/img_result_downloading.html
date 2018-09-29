@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+
+<title>KID</title>
+
+<link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css">
+<link type="text/css" rel="stylesheet" href="../../css/style.css">
+
+<script type="text/javascript" src="../../js/jquery-1.12.4.min.js"></script>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="../../js/html5shiv.min.js"></script>
+<![endif]-->
+<!--[if lt IE 10]>
+<script type="text/javascript" src="../../js/placeholders.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="../../js/script.js"></script>
+</head>
+<body id="sub">
+    <div class="wrapper">
+        <header id="header">
+            <div class="box-inner">
+                <h1 class="logo"><a href="#none">KID, KT IMAGE DATASET</a></h1>
+
+                <nav class="navigation">
+                    <ul>
+                        <li class="acitve"><a href="#none">Image Dataset</a></li>
+                        <li><a href="#none">Annotation Tool</a></li>
+                        <li>
+                            <a href="#none">Admin</a>
+                            <ul class="sub-menu"><!-- 20180906 서브메뉴 추가 -->
+                                <li><a href="#none">이미지 데이터 관리</a></li>
+                                <li><a href="#none">항목 관리</a></li>
+                                <li><a href="#none">사용자 관리</a></li>
+                                <li><a href="#none">권한 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="user-menu">
+                    <button type="button" class="user-name">User 01 <i></i></button>
+                    <ul>
+                        <li><a href="#none">My page</a></li>
+                        <li><a href="#none">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main id="container">
+            <div class="img-filter-box filter-result"><!-- 결과를 보여줄때, ".filter-section.result-tag"가 추가됨으로써, 필터높이가 달라집니다.
+                filter-result 클래스 추가 -->
+                <div class="box-inner">
+                    <section class="filter-section img-type">
+                        <h3>Img Type by</h3>
+                        <div class="scroll-box">
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="type01" name="img_type">
+                                    <label for="type01">A type</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="type02" name="img_type">
+                                    <label for="type02">B type</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="type03" name="img_type">
+                                    <label for="type03">C type</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="type04" name="img_type">
+                                    <label for="type04">D type</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="type05" name="img_type">
+                                    <label for="type05">E type</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="type06" name="img_type">
+                                    <label for="type06">F type</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="type07" name="img_type">
+                                    <label for="type07">G type</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="type08" name="img_type">
+                                    <label for="type08">H type</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="type09" name="img_type">
+                                    <label for="type09">I type</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="type10" name="img_type">
+                                    <label for="type10">J type</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="type11" name="img_type">
+                                    <label for="type11">K type</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <script type="text/javascript">
+                        // 위의 내용 불러온뒤, 넘치면 스크롤 생성
+                        $(document).ready(function(){
+                            $(".img-type .scroll-box ul").mCustomScrollbar({
+                                scrollInertia: 300
+                            });
+                        });
+                    </script>
+                    <section class="filter-section img-part">
+                        <h3>Annotation</h3>
+                        <div class="scroll-box">
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="all" name="img_part">
+                                    <label for="all">All</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_part01" name="img_part">
+                                    <label for="img_part01">Person</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_part02" name="img_part">
+                                    <label for="img_part02">Upper body</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_part03" name="img_part">
+                                    <label for="img_part03">Head</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_part04" name="img_part">
+                                    <label for="img_part04">Eye</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_part05" name="img_part">
+                                    <label for="img_part05">Lip</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_part06" name="img_part">
+                                    <label for="img_part06">Ear</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_part07" name="img_part">
+                                    <label for="img_part07">Hand</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_part08" name="img_part">
+                                    <label for="img_part08">Hip</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_part09" name="img_part">
+                                    <label for="img_part09">Leg</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_part10" name="img_part">
+                                    <label for="img_part10">Knee</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_part11" name="img_part">
+                                    <label for="img_part11">Foot</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <script type="text/javascript">
+                        // 위의 내용 불러온뒤, 넘치면 스크롤 생성
+                        $(document).ready(function(){
+                            $(".img-part .scroll-box ul").mCustomScrollbar({
+                                scrollInertia: 300
+                            });
+                        });
+                    </script>
+                    <section class="filter-section img-meta">
+                        <h3>Meta-data</h3>
+                        <div class="scroll-box">
+                            <ul>
+                                <li>
+                                    <input type="checkbox" id="img_meta01" name="img_meta">
+                                    <label for="img_meta01">Blank face</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_meta02" name="img_meta">
+                                    <label for="img_meta02">pleasure</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_meta03" name="img_meta">
+                                    <label for="img_meta03">sadness</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_meta04" name="img_meta">
+                                    <label for="img_meta04">anger</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_meta05" name="img_meta">
+                                    <label for="img_meta05">surprised</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_meta06" name="img_meta">
+                                    <label for="img_meta06">beard</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_meta07" name="img_meta">
+                                    <label for="img_meta07">celeb</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_meta08" name="img_meta">
+                                    <label for="img_meta08">10 대</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_meta09" name="img_meta">
+                                    <label for="img_meta09">20 대</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_meta10" name="img_meta">
+                                    <label for="img_meta10">30 대</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_meta11" name="img_meta">
+                                    <label for="img_meta11">40 대</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_meta12" name="img_meta">
+                                    <label for="img_meta12">50 대</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_meta13" name="img_meta">
+                                    <label for="img_meta13">60 대</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_meta14" name="img_meta">
+                                    <label for="img_meta14">male</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_meta15" name="img_meta">
+                                    <label for="img_meta15">female</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_meta16" name="img_meta">
+                                    <label for="img_meta16">small</label>
+                                </li>
+                                <li>
+                                    <input type="checkbox" id="img_meta17" name="img_meta">
+                                    <label for="img_meta17">big</label>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <script type="text/javascript">
+                        // 위의 내용 불러온뒤, 넘치면 스크롤 생성
+                        $(document).ready(function(){
+                            $(".img-meta .scroll-box ul").mCustomScrollbar({
+                                scrollInertia: 200
+                            });
+                        });
+                    </script>
+                    <section class="filter-section img-caption">
+                        <h3>Caption</h3>
+                        <div class="srh-box">
+                            <input type="text" class="input-keyword" placeholder="caption search">
+                            <input type="button" class="btn-srh" value="search">
+                        </div>
+                    </section>
+                    <section class="filter-section result-tag">
+                        <div class="scroll-box">
+                            <ul>
+                                <li><button type="button" class="type-tag">A type</button></li>
+                                <li><button type="button" class="meta-tag">Surprised</button></li>
+                                <li><button type="button" class="part-tag">Upper body</button></li>
+                                <li><button type="button" class="type-tag">A type</button></li>
+                                <li><button type="button" class="key-tag">Old man</button></li>
+                                <li><button type="button" class="meta-tag">Surprised</button></li>
+                                <li><button type="button" class="part-tag">Upper body</button></li>
+                                <li><button type="button" class="type-tag">A type</button></li>
+                                <li><button type="button" class="meta-tag">Surprised</button></li>
+                                <li><button type="button" class="key-tag">Piano</button></li>
+                                <li><button type="button" class="part-tag">Upper body</button></li>
+                                <li><button type="button" class="type-tag">A type</button></li>
+                                <li><button type="button" class="meta-tag">Surprised</button></li>
+                                <li><button type="button" class="part-tag">Upper body</button></li>
+                                <li><button type="button" class="type-tag">A type</button></li>
+                                <li><button type="button" class="meta-tag">Surprised</button></li>
+                                <li><button type="button" class="part-tag">Upper body</button></li>
+                                <li><button type="button" class="type-tag">A type</button></li>
+                                <li><button type="button" class="meta-tag">Surprised</button></li>
+                                <li><button type="button" class="part-tag">Upper body</button></li>
+                            </ul>
+                        </div>
+                    </section>
+                    <script type="text/javascript">
+                        // 위의 내용 불러온뒤, 넘치면 스크롤 생성
+                        $(document).ready(function(){
+                            $(".result-tag .scroll-box ul").mCustomScrollbar({
+                                scrollInertia: 200
+                            });
+                        });
+                    </script>
+                    
+                    <button type="button" class="btn-reset">CLEAR ALL</button>
+                </div>
+            </div>
+            <div class="img-srh-list">
+                <div class="box-inner">
+                    <div class="srh-notice">
+                        <p class="srh-total">There are <b class="srh-num">150,000</b> images in total.</p>
+
+                        <p class="down-able">Search result <b class="down-num">148</b> images <a href="#none" class="btn-down-all">Download ALL</a></p>
+                    </div>
+
+                    <ul>
+                        <li>
+                            <div class="filter-thumb"><img src="../../img/filter_img01.jpg" alt=""></div>
+                            <div class="filter-info">
+                                <p class="img-id">Image ID : AAA0001 (Type_A) image text blar blar blar</p>
+                                <a href="#none" class="btn-down-this">Download</a>
+                                <div class="part-box">
+                                    <ul>
+                                        <li class="type01">
+                                            <input type="checkbox" id="img_part01_copy" name="img_part_copy">
+                                            <label for="img_part01_copy">Upper body</label>
+                                        </li>
+                                        <li class="type02">
+                                            <input type="checkbox" id="img_part02_copy" name="img_part_copy" checked>
+                                            <label for="img_part02_copy">Head</label>
+                                        </li>
+                                        <li class="type03">
+                                            <input type="checkbox" id="img_part03_copy" name="img_part_copy">
+                                            <label for="img_part03_copy">Lip</label>
+                                        </li>
+                                        <li class="type04">
+                                            <input type="checkbox" id="img_part04_copy" name="img_part_copy">
+                                            <label for="img_part04_copy">Person</label>
+                                        </li>
+                                        <li class="type05">
+                                            <input type="checkbox" id="img_part05_copy" name="img_part_copy">
+                                            <label for="img_part05_copy">Eye</label>
+                                        </li>
+                                        <li class="type06">
+                                            <input type="checkbox" id="img_part06_copy" name="img_part_copy">
+                                            <label for="img_part06_copy">Hip</label>
+                                        </li>
+                                        <li class="type07">
+                                            <input type="checkbox" id="img_part07_copy" name="img_part_copy">
+                                            <label for="img_part07_copy">Waist</label>
+                                        </li>
+                                        <li class="type08">
+                                            <input type="checkbox" id="img_part08_copy" name="img_part_copy">
+                                            <label for="img_part08_copy">Wrist</label>
+                                        </li>
+                                        <li class="type09">
+                                            <input type="checkbox" id="img_part09_copy" name="img_part_copy">
+                                            <label for="img_part09_copy">Leg</label>
+                                        </li>
+                                        <li class="type10">
+                                            <input type="checkbox" id="img_part10_copy" name="img_part_copy">
+                                            <label for="img_part10_copy">Foot</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="meta-box">
+                                    <ul>
+                                        <li><label>Blank face</label></li>
+                                        <li><label>pleasure</label></li>
+                                        <li><label>sadness</label></li>
+                                        <li><label>anger</label></li>
+                                        <li><label>surprised</label></li>
+                                        <li><label>beard</label></li>
+                                        <li><label>celeb</label></li>
+                                        <li><label>10 대</label></li>
+                                        <li><label>20 대</label></li>
+                                        <li><label>30 대</label></li>
+                                        <li><label>40 대</label></li>
+                                    </ul>
+                                </div>
+                                <div class="description">
+                                    The man is playing the piano.
+                                    A man seems to be about 60 years old.<br>
+                                    The man looks famous.<br>
+                                    A man seems to be about 60 years old.
+                                </div>
+
+                            </div>
+                        </li>
+                        <li>
+                            <div class="filter-thumb"><img src="../../img/filter_img02.jpg" alt=""></div>
+                            <div class="filter-info">
+                                <p class="img-id">Image ID : AAA0001 (Type_A) image text blar blar blar</p>
+                                <a href="#none" class="btn-down-this">Download</a>
+                                <div class="part-box">
+                                    <ul>
+                                        <li class="type01">
+                                            <input type="checkbox" id="img_part01_copy2" name="img_part_copy2" checked>
+                                            <label for="img_part01_copy2">Upper body</label>
+                                        </li>
+                                        <li class="type02">
+                                            <input type="checkbox" id="img_part02_copy2" name="img_part_copy2">
+                                            <label for="img_part02_copy2">Head</label>
+                                        </li>
+                                        <li class="type03">
+                                            <input type="checkbox" id="img_part03_copy2" name="img_part_copy2">
+                                            <label for="img_part03_copy2">Lip</label>
+                                        </li>
+                                        <li class="type04">
+                                            <input type="checkbox" id="img_part04_copy2" name="img_part_copy2">
+                                            <label for="img_part04_copy2">Person</label>
+                                        </li>
+                                        <li class="type05">
+                                            <input type="checkbox" id="img_part05_copy2" name="img_part_copy2">
+                                            <label for="img_part05_copy2">Eye</label>
+                                        </li>
+                                        <li class="type06">
+                                            <input type="checkbox" id="img_part06_copy2" name="img_part_copy2">
+                                            <label for="img_part06_copy2">Hip</label>
+                                        </li>
+                                        <li class="type07">
+                                            <input type="checkbox" id="img_part07_copy2" name="img_part_copy2">
+                                            <label for="img_part07_copy2">Waist</label>
+                                        </li>
+                                        <li class="type08">
+                                            <input type="checkbox" id="img_part08_copy2" name="img_part_copy2">
+                                            <label for="img_part08_copy2">Wrist</label>
+                                        </li>
+                                        <li class="type09">
+                                            <input type="checkbox" id="img_part09_copy2" name="img_part_copy2">
+                                            <label for="img_part09_copy2">Leg</label>
+                                        </li>
+                                        <li class="type10">
+                                            <input type="checkbox" id="img_part10_copy2" name="img_part_copy2">
+                                            <label for="img_part10_copy2">Foot</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="meta-box">
+                                    <ul>
+                                        <li><label>Blank face</label></li>
+                                        <li><label>pleasure</label></li>
+                                        <li><label>sadness</label></li>
+                                        <li><label>anger</label></li>
+                                        <li><label>surprised</label></li>
+                                        <li><label>beard</label></li>
+                                        <li><label>celeb</label></li>
+                                        <li><label>10 대</label></li>
+                                        <li><label>20 대</label></li>
+                                        <li><label>30 대</label></li>
+                                        <li><label>40 대</label></li>
+                                    </ul>
+                                </div>
+                                <div class="description">
+                                    The man is playing the piano.
+                                    A man seems to be about 60 years old.<br>
+                                    The man looks famous.<br>
+                                    A man seems to be about 60 years old.
+                                </div>
+
+                            </div>
+                        </li>
+                    </ul>
+                    <script type="text/javascript">
+                        // 위의 내용 불러온뒤, 넘치면 스크롤 생성
+                        $(document).ready(function(){
+                            $(".filter-info .meta-box ul").mCustomScrollbar({
+                                scrollInertia: 200
+                            });
+                        });
+                    </script>
+                </div>
+            </div>
+
+        </main>
+
+        <footer id="footer">
+            <p class="company-info">
+                <span>㈜케이티 대표이사 황창규</span><span>사업자등록번호 : 102-81-42945</span><span>통신판매업신고 : 2002-경기성남-0048</span>
+            </p>
+            <address>경기도 성남시 분당구 불정로 90 (정자동)</address>
+
+            <p class="copyright">Copyrightⓒ2018 KT corp. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <div class="download-dim">
+        <div class="table-wrap">
+            <div class="tb-cell">
+                <div class="title-box">
+                    <strong>Download ALL</strong>
+                    <p>전체 검색 결과를 수집, 압축, 다운로드 합니다.</p>
+                </div>
+                <div class="state-box">
+                    <ul>
+                        <li class="data-collect">
+                            <div class="chk-box">
+                                <p class="chk-ani">
+                                    <span class="short-line"></span>
+                                    <span class="long-line"></span>
+                                </p>
+                                <p class="line-ani"></p>
+                            </div>
+                            <svg class="graph_data">
+                                <circle class="circle" cx="30" cy="30" r="25" />
+                            </svg>
+                            <p class="loading-title">데이터 수집 중</p>
+                        </li>
+                        <li class="data-zip">
+                            <div class="chk-box">
+                                <p class="chk-ani">
+                                    <span class="short-line"></span>
+                                    <span class="long-line"></span>
+                                </p>
+                                <p class="line-ani"></p>
+                            </div>
+                            <svg class="graph_data">
+                                <circle class="circle" cx="30" cy="30" r="25" />
+                            </svg>
+                            <p class="loading-title">데이터 압축 중</p>
+                        </li>
+                        <li class="data-down">
+                            <div class="chk-box">
+                                <p class="chk-ani">
+                                    <span class="short-line"></span>
+                                    <span class="long-line"></span>
+                                </p>
+                                <p class="line-ani"></p>
+                            </div>
+                            <svg class="graph_data">
+                                <circle class="circle" cx="30" cy="30" r="25" />
+                            </svg>
+                            <p class="loading-title">다운로드 중</p>
+                        </li>
+                    </ul>
+                </div>
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        // svg graph
+                        var zero_graph = 157.0796; // 0% of graph
+                        var full_graph = 0; // 100% of graph
+
+                        $(".data-collect").addClass("active");
+                        $(".data-collect .graph_data .circle").animate({strokeDashoffset: full_graph}, 1000, "swing"); // data animation
+                        $(".data-collect .line-ani").delay(1000).animate({width: "275px"}, 500); // data animation
+                        $(".data-collect .chk-ani").delay(1000).queue(function(){
+                            $(this).addClass("complete");
+                        });
+
+
+                        $(".data-zip").delay(1500).queue(function(){
+                            $(this).addClass("active");
+                        });
+                        $(".data-zip .graph_data .circle").delay(1500).animate({strokeDashoffset: full_graph}, 1000, "swing"); // data animation
+                        $(".data-zip .line-ani").delay(2500).animate({width: "275px"}, 500); // data animation
+                        $(".data-zip .chk-ani").delay(2500).queue(function(){
+                            $(this).addClass("complete");
+                        });
+
+
+                        $(".data-down").delay(3000).queue(function(){
+                            $(this).addClass("active");
+                        });
+                        $(".data-down .graph_data .circle").delay(3000).animate({strokeDashoffset: full_graph}, 1000, "swing"); // data animation
+                        $(".data-down .chk-ani").delay(4000).queue(function(){
+                            $(this).addClass("complete");
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

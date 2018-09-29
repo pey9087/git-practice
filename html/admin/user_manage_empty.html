@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <title>KID</title>
+
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css">
+    <link type="text/css" rel="stylesheet" href="../../css/style.css">
+
+    <script type="text/javascript" src="../../js/jquery-1.12.4.min.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 10]>
+    <script type="text/javascript" src="../../js/placeholders.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/script.js"></script>
+</head>
+<body id="sub">
+    <div class="wrapper">
+        <header id="header">
+            <div class="box-inner">
+                <h1 class="logo"><a href="#none">KID, KT IMAGE DATASET</a></h1>
+
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="#none">Image Dataset</a></li>
+                        <li><a href="#none">Annotation Tool</a></li>
+                        <li class="active">
+                            <a href="#none">Admin</a>
+                            <ul class="sub-menu"><!-- 20180906 서브메뉴 추가 -->
+                                <li><a href="#none">이미지 데이터 관리</a></li>
+                                <li><a href="#none">항목 관리</a></li>
+                                <li class="active"><a href="#none">사용자 관리</a></li>
+                                <li><a href="#none">권한 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="user-menu">
+                    <button type="button" class="user-name">User 01 <i></i></button>
+                    <ul>
+                        <li><a href="#none">My page</a></li>
+                        <li><a href="#none">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main id="container">
+
+            <div class="task-wrap">
+
+                <div class="task-head">
+                    <div class="box-inner">
+                        <h2 class="task-title">사용자 관리</h2>
+
+                        <button type="button" class="btn-user-making task-sub" onClick="javascript:layer_popup('#user_making');">사용자 등록</button>
+                    </div>
+                </div>
+                <div class="input-form srh-line">
+                    <div class="input-part">
+                        <p class="input-name">소속</p>
+                        <div class="input-box select-outbox">
+                            <div class="select-ui">
+                                <button type="button" class="select-value placeholder">Select Group</button>
+                                <div class="select-box">
+                                    <ul class="select-list">
+                                        <li><button type="button">연구소 1</button></li>
+                                        <li><button type="button">연구소 2</button></li>
+                                        <li><button type="button">연구소 3</button></li>
+                                        <li><button type="button">연구소 4</button></li>
+                                        <li><button type="button">연구소 5</button></li>
+                                        <li><button type="button">연구소 6</button></li>
+                                        <li><button type="button">연구소 7</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-part">
+                        <p class="input-name">ID/NAME</p>
+                        <div class="input-box">
+                            <input type="text" placeholder="Search ID / Name">
+                        </div>
+                    </div>
+                    <button type="button" class="assign-srh-btn">Search</button>
+                </div>
+
+                <div class="task-list">
+                    <div class="box-inner">
+                        <table>
+                            <colgroup>
+                                <col width="120">
+                                <col width="*">
+                                <col width="202">
+                                <col width="202">
+                                <col width="149">
+                                <col width="149">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">No.</th>
+                                    <th scope="col">
+                                        ID
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        Name
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        소속
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        사용 중지
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                    <th scope="col">권한 수정</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="6" class="no-result-td">
+                                        <!-- 결과 없음// -->
+                                        <div class="no-result-box">
+                                            <div class="icon-bg">
+                                                <strong>Sorry,</strong>
+                                                <p>no results were found.</p>
+                                            </div>
+                                        </div>
+                                        <!-- //결과 없음 -->
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        <footer id="footer">
+            <p class="company-info">
+                <span>㈜케이티 대표이사 황창규</span><span>사업자등록번호 : 102-81-42945</span><span>통신판매업신고 : 2002-경기성남-0048</span>
+            </p>
+            <address>경기도 성남시 분당구 불정로 90 (정자동)</address>
+
+            <p class="copyright">Copyrightⓒ2018 KT corp. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- 컨펌 팝업 추가// -->
+    <div class="popup-dim">
+
+        <!-- 버튼의 클래스 layer_close은 닫는 기능을 위해 임의로 추가, 확인 취소 기능을 구현시 제거할것 -->
+
+        <div class="confirm-popup input-popup bigger-popup" id="user_making">
+            <strong class="popup-title">
+                <i class="icon-user"></i>
+                사용자 등록
+            </strong>
+            <div class="input-form">
+                <div class="user-info">
+                    <div class="input-part">
+                        <p class="input-name">ID</p>
+                        <div class="input-box">
+                            <input type="text" placeholder="Please write ID">
+                        </div>
+                    </div>
+                    <div class="input-part">
+                        <p class="input-name">Name</p>
+                        <div class="input-box">
+                            <input type="text" placeholder="Please write Name">
+                        </div>
+                    </div>
+                    <div class="input-part">
+                        <p class="input-name">소속</p>
+                        <div class="input-box">
+                            <div class="select-ui">
+                                <button type="button" class="select-value placeholder">소속을 선택해주세요.</button>
+                                <div class="select-box">
+                                    <ul class="select-list">
+                                        <li><button type="button">연구팀 1</button></li>
+                                        <li><button type="button">연구팀 2</button></li>
+                                        <li><button type="button">연구팀 3</button></li>
+                                        <li><button type="button">연구팀 4</button></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-part">
+                        <p class="input-name">사용중지</p>
+                        <div class="input-box">
+                            <input type="radio" name="boolean" id="yes_answer">
+                            <label for="yes_answer">Y</label>
+
+                            <input type="radio" name="boolean" id="no_answer">
+                            <label for="no_answer">N</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-part table">
+                    <p class="input-name">권한</p>
+                    <table>
+                        <colgroup>
+                            <col width="224">
+                            <col width="150">
+                            <col width="*">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">권한 ID</th>
+                                <th scope="col">권한 그룹</th>
+                                <th scope="col">권한 명</th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="table-scroll">
+                        <table>
+                            <colgroup>
+                                <col width="224">
+                                <col width="150">
+                                <col width="*">
+                            </colgroup>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="power_chk" id="auth_01">
+                                        <label for="auth_01">AUTH_MENU_1</label>
+                                    </td>
+                                    <td class="center">메뉴 권한</td>
+                                    <td>Image Dataset</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="power_chk" id="auth_02">
+                                        <label for="auth_02">AUTH_MENU_2</label>
+                                    </td>
+                                    <td class="center">다운로드 권한</td>
+                                    <td>Annotation Tool</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="power_chk" id="auth_03">
+                                        <label for="auth_03">AUTH_MENU_3</label>
+                                    </td>
+                                    <td class="center"></td>
+                                    <td>Annotation Tool &gt; Worker</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="power_chk" id="auth_04">
+                                        <label for="auth_04">AUTH_JOB_ADMIN_SYS</label>
+                                    </td>
+                                    <td class="center"></td>
+                                    <td>Annotation Tool &gt; 2nd Approver</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="power_chk" id="auth_05">
+                                        <label for="auth_05">AUTH_MENU_5</label>
+                                    </td>
+                                    <td class="center"></td>
+                                    <td>Image Dataset</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="power_chk" id="auth_06">
+                                        <label for="auth_06">AUTH_MENU_6</label>
+                                    </td>
+                                    <td class="center"></td>
+                                    <td>Image Dataset</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="power_chk" id="auth_07">
+                                        <label for="auth_07">AUTH_MENU_7</label>
+                                    </td>
+                                    <td class="center"></td>
+                                    <td>Image Dataset</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="power_chk" id="auth_08">
+                                        <label for="auth_08">AUTH_MENU_8</label>
+                                    </td>
+                                    <td class="center"></td>
+                                    <td>Image Dataset</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="power_chk" id="auth_09">
+                                        <label for="auth_09">AUTH_MENU_9</label>
+                                    </td>
+                                    <td class="center"></td>
+                                    <td>Image Dataset</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="power_chk" id="auth_10">
+                                        <label for="auth_10">AUTH_MENU_10</label>
+                                    </td>
+                                    <td class="center"></td>
+                                    <td>Image Dataset</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box">
+                <input type="button" class="confirm-btn2 layer_close" value="확인">
+                <button type="button" class="cancel-btn layer_close">취소</button>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $(".input-part .table-scroll").mCustomScrollbar({
+                    scrollInertia: 300
+                });
+            });
+        </script>
+
+    </div>
+    <!-- //컨펌 팝업 추가 -->
+
+</body>
+</html>

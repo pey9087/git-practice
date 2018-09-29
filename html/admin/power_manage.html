@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <title>KID</title>
+
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css">
+    <link type="text/css" rel="stylesheet" href="../../css/style.css">
+
+    <script type="text/javascript" src="../../js/jquery-1.12.4.min.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 10]>
+    <script type="text/javascript" src="../../js/placeholders.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/script.js"></script>
+</head>
+<body id="sub">
+    <div class="wrapper">
+        <header id="header">
+            <div class="box-inner">
+                <h1 class="logo"><a href="#none">KID, KT IMAGE DATASET</a></h1>
+
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="#none">Image Dataset</a></li>
+                        <li><a href="#none">Annotation Tool</a></li>
+                        <li class="active">
+                            <a href="#none">Admin</a>
+                            <ul class="sub-menu"><!-- 20180906 서브메뉴 추가 -->
+                                <li><a href="#none">이미지 데이터 관리</a></li>
+                                <li><a href="#none">항목 관리</a></li>
+                                <li><a href="#none">사용자 관리</a></li>
+                                <li class="active"><a href="#none">권한 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="user-menu">
+                    <button type="button" class="user-name">User 01 <i></i></button>
+                    <ul>
+                        <li><a href="#none">My page</a></li>
+                        <li><a href="#none">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main id="container">
+
+            <div class="task-wrap">
+
+                <div class="task-head">
+                    <div class="box-inner">
+                        <h2 class="task-title">권한 관리</h2>
+                        <div class="task-tab admin-tab">
+                            <ul>
+                                <li><button type="button">권한 목록</button></li>
+                                <li><button type="button">권한 부여</button></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="task-list">
+                    <div class="box-inner">
+                        <table>
+                            <colgroup>
+                                <col width="260">
+                                <col width="140">
+                                <col width="*">
+                                <col width="176">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        Auth ID
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        Auth Group
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                    <th scope="col">Auth Name</th>
+                                    <th scope="col">권한자</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><a href="#none">AUTH_JOB_ADMIN_SYS</a></td>
+                                    <td>메뉴 권한</td>
+                                    <td><span class="ellipsis padding">Annotation Tool &gt; 2nd Approver</span></td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#none">AUTH_JOB_ADMIN_SYS</a></td>
+                                    <td>다운로드 권한</td>
+                                    <td><span class="ellipsis padding">Annotation Tool &gt; 2nd Approver</span></td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#none">AUTH_JOB_ADMIN_SYS</a></td>
+                                    <td>검색 권한</td>
+                                    <td><span class="ellipsis padding">Annotation Tool &gt; 2nd Approver</span></td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#none">AUTH_JOB_ADMIN_SYS</a></td>
+                                    <td>메뉴권한</td>
+                                    <td><span class="ellipsis padding">Annotation Tool &gt; 2nd Approver</span></td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#none">AUTH_JOB_ADMIN_SYS</a></td>
+                                    <td>메뉴권한</td>
+                                    <td><span class="ellipsis padding">Annotation Tool &gt; 2nd Approver</span></td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#none">AUTH_JOB_ADMIN_SYS</a></td>
+                                    <td>메뉴권한</td>
+                                    <td><span class="ellipsis padding">Annotation Tool &gt; 2nd Approver</span></td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#none">AUTH_JOB_ADMIN_SYS</a></td>
+                                    <td>메뉴권한</td>
+                                    <td><span class="ellipsis padding">Annotation Tool &gt; 2nd Approver</span></td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#none">AUTH_JOB_ADMIN_SYS</a></td>
+                                    <td>메뉴권한</td>
+                                    <td><span class="ellipsis padding">Annotation Tool &gt; 2nd Approver</span></td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#none">AUTH_JOB_ADMIN_SYS</a></td>
+                                    <td>메뉴권한</td>
+                                    <td><span class="ellipsis padding">Annotation Tool &gt; 2nd Approver</span></td>
+                                    <td>100</td>
+                                </tr>
+                                <tr>
+                                    <td><a href="#none">AUTH_JOB_ADMIN_SYS</a></td>
+                                    <td>메뉴권한</td>
+                                    <td><span class="ellipsis padding">Annotation Tool &gt; 2nd Approver</span></td>
+                                    <td>100</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="paging-box">
+                            <button type="button" class="btn-paging first-page">Go to First page</button>
+                            <button type="button" class="btn-paging prev-page">Go to Prev page</button>
+                            <ul class="paging-num">
+                                <li class="active"><button type="button">1</button></li>
+                                <li><button type="button">2</button></li>
+                                <li><button type="button">3</button></li>
+                                <li><button type="button">4</button></li>
+                                <li><button type="button">5</button></li>
+                            </ul>
+                            <button type="button" class="btn-paging next-page enabled">Go to Next page</button>
+                            <button type="button" class="btn-paging last-page enabled">Go to Last page</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="task-list power-manage-box">
+                    <div class="box-inner">
+                        <div class="assign-srh img-select">
+                            <p class="worker-id">권한</p>
+                            <p class="srh-guide">사용자에게 부여한 권한을 선택해 주세요.</p>
+
+                            <div class="input-form srh-line">
+                                <div class="input-part">
+                                    <div class="input-box select-outbox">
+                                        <div class="select-ui">
+                                            <button type="button" class="select-value placeholder">Select Image Type</button>
+                                            <div class="select-box">
+                                                <ul class="select-list">
+                                                    <li><button type="button">TYPE_A</button></li>
+                                                    <li><button type="button">TYPE_B</button></li>
+                                                    <li><button type="button">TYPE_C</button></li>
+                                                    <li><button type="button">TYPE_D</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-part">
+                                    <div class="input-box select-outbox">
+                                        <div class="select-ui">
+                                            <button type="button" class="select-value placeholder">Select Image Type</button>
+                                            <div class="select-box">
+                                                <ul class="select-list">
+                                                    <li><button type="button">TYPE_A</button></li>
+                                                    <li><button type="button">TYPE_B</button></li>
+                                                    <li><button type="button">TYPE_C</button></li>
+                                                    <li><button type="button">TYPE_D</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="assign-srh">
+                            <p class="worker-id">사용자</p>
+                            <p class="srh-guide">사용자에게 부여한 권한을 선택해 주세요.</p>
+
+                            <div class="input-form srh-line">
+                                <div class="input-part">
+                                    <p class="input-name">ID/NAME</p>
+                                    <div class="input-box">
+                                        <input type="text" placeholder="Search ID / Name">
+                                    </div>
+                                </div>
+                                <button type="button" class="assign-srh-btn">Search</button>
+                            </div>
+                        </div>
+                        <table>
+                            <colgroup>
+                                <col width="120">
+                                <col width="202">
+                                <col width="202">
+                                <col width="202">
+                                <col width="*">
+                                <col width="147">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">
+                                        <input type="checkbox" name="user_select" id="all_select">
+                                        <label for="all_select" class="just-chk"></label>
+                                    </th>
+                                    <th scope="col">
+                                        ID
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        Name
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        소속
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        권한
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        사용 중지
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="user_select" id="user_01" checked>
+                                        <label for="user_01" class="just-chk"></label>
+                                    </td>
+                                    <td><a href="#none">200510280</a></td>
+                                    <td>황철수</td>
+                                    <td>연구팀 1</td>
+                                    <td>일반 회원</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="user_select" id="user_02" checked>
+                                        <label for="user_02" class="just-chk"></label>
+                                    </td>
+                                    <td><a href="#none">200510280</a></td>
+                                    <td>황철수</td>
+                                    <td>연구팀 1</td>
+                                    <td>일반 회원</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="user_select" id="user_03">
+                                        <label for="user_03" class="just-chk"></label>
+                                    </td>
+                                    <td><a href="#none">200510280</a></td>
+                                    <td>황철수</td>
+                                    <td>연구팀 1</td>
+                                    <td>일반 회원</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="user_select" id="user_04">
+                                        <label for="user_04" class="just-chk"></label>
+                                    </td>
+                                    <td><a href="#none">200510280</a></td>
+                                    <td>황철수</td>
+                                    <td>연구팀 1</td>
+                                    <td>일반 회원</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="user_select" id="user_05" checked>
+                                        <label for="user_05" class="just-chk"></label>
+                                    </td>
+                                    <td><a href="#none">200510280</a></td>
+                                    <td>황철수</td>
+                                    <td>연구팀 1</td>
+                                    <td>일반 회원</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="user_select" id="user_06">
+                                        <label for="user_06" class="just-chk"></label>
+                                    </td>
+                                    <td><a href="#none">200510280</a></td>
+                                    <td>황철수</td>
+                                    <td>연구팀 1</td>
+                                    <td>일반 회원</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="user_select" id="user_07">
+                                        <label for="user_07" class="just-chk"></label>
+                                    </td>
+                                    <td><a href="#none">200510280</a></td>
+                                    <td>황철수</td>
+                                    <td>연구팀 1</td>
+                                    <td>일반 회원</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="user_select" id="user_08">
+                                        <label for="user_08" class="just-chk"></label>
+                                    </td>
+                                    <td><a href="#none">200510280</a></td>
+                                    <td>황철수</td>
+                                    <td>연구팀 1</td>
+                                    <td>일반 회원</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="user_select" id="user_09">
+                                        <label for="user_09" class="just-chk"></label>
+                                    </td>
+                                    <td><a href="#none">200510280</a></td>
+                                    <td>황철수</td>
+                                    <td>연구팀 1</td>
+                                    <td>일반 회원</td>
+                                    <td>Y</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox" name="user_select" id="user_10">
+                                        <label for="user_10" class="just-chk"></label>
+                                    </td>
+                                    <td><a href="#none">200510280</a></td>
+                                    <td>황철수</td>
+                                    <td>연구팀 1</td>
+                                    <td>일반 회원</td>
+                                    <td>Y</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="paging-box">
+                            <button type="button" class="btn-paging first-page">Go to First page</button>
+                            <button type="button" class="btn-paging prev-page">Go to Prev page</button>
+                            <ul class="paging-num">
+                                <li class="active"><button type="button">1</button></li>
+                                <li><button type="button">2</button></li>
+                                <li><button type="button">3</button></li>
+                                <li><button type="button">4</button></li>
+                                <li><button type="button">5</button></li>
+                            </ul>
+                            <button type="button" class="btn-paging next-page enabled">Go to Next page</button>
+                            <button type="button" class="btn-paging last-page enabled">Go to Last page</button>
+                        </div>
+
+                        <input type="button" class="btn-save" value="저장" disabled>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        <footer id="footer">
+            <p class="company-info">
+                <span>㈜케이티 대표이사 황창규</span><span>사업자등록번호 : 102-81-42945</span><span>통신판매업신고 : 2002-경기성남-0048</span>
+            </p>
+            <address>경기도 성남시 분당구 불정로 90 (정자동)</address>
+
+            <p class="copyright">Copyrightⓒ2018 KT corp. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- 컨펌 팝업 추가// -->
+    <div class="popup-dim">
+
+        <!-- 버튼의 클래스 layer_close은 닫는 기능을 위해 임의로 추가, 확인 취소 기능을 구현시 제거할것 -->
+
+        <div class="confirm-popup input-popup" id="folder_making">
+            <strong class="popup-title">
+                <i class="icon-folder"></i>
+                폴더 등록
+            </strong>
+            <div class="input-form">
+                <div class="input-part">
+                    <p class="input-name">Folder Name</p>
+                    <div class="input-box">
+                        <input type="text" placeholder="Please write folder name">
+                    </div>
+                </div>
+                <div class="input-part textarea">
+                    <p class="input-name">Folder Description</p>
+                    <div class="input-box">
+                        <textarea placeholder="Please write Description"></textarea>
+                    </div>
+                </div>
+                <div class="input-part">
+                    <p class="input-name">Image Type</p>
+                    <div class="input-box">
+                        <div class="select-ui">
+                            <button type="button" class="select-value placeholder">Select Image Type</button>
+                            <div class="select-box">
+                                <ul class="select-list">
+                                    <li><button type="button">TYPE_A</button></li>
+                                    <li><button type="button">TYPE_B</button></li>
+                                    <li><button type="button">TYPE_C</button></li>
+                                    <li><button type="button">TYPE_D</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box">
+                <input type="button" class="confirm-btn2 layer_close" value="확인" disabled>
+                <button type="button" class="cancel-btn layer_close">취소</button>
+            </div>
+        </div>
+
+        <div class="confirm-popup input-popup" id="file_upload">
+            <strong class="popup-title">
+                <i class="icon-upload"></i>
+                Upload
+            </strong>
+            <div class="input-form">
+                <input type="file" id="file_input" class="file-input">
+                <div class="drag-label"></div>
+                <label for="file_input" class="file-label">Choose files</label>
+            </div>
+            <div class="btn-box">
+                <input type="button" class="confirm-btn2 layer_close" value="확인">
+                <button type="button" class="cancel-btn layer_close">취소</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- //컨펌 팝업 추가 -->
+
+</body>
+</html>

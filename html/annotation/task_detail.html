@@ -1,0 +1,263 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <title>KID</title>
+
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css">
+    <link type="text/css" rel="stylesheet" href="../../css/style.css">
+
+    <script type="text/javascript" src="../../js/jquery-1.12.4.min.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 10]>
+    <script type="text/javascript" src="../../js/placeholders.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/script.js"></script>
+</head>
+<body id="sub">
+    <div class="wrapper">
+        <header id="header">
+            <div class="box-inner">
+                <h1 class="logo"><a href="#none">KID, KT IMAGE DATASET</a></h1>
+
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="#none">Image Dataset</a></li>
+                        <li class="active"><a href="#none">Annotation Tool</a></li>
+                        <li>
+                            <a href="#none">Admin</a>
+                            <ul class="sub-menu"><!-- 20180906 서브메뉴 추가 -->
+                                <li><a href="#none">이미지 데이터 관리</a></li>
+                                <li><a href="#none">항목 관리</a></li>
+                                <li><a href="#none">사용자 관리</a></li>
+                                <li><a href="#none">권한 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="user-menu">
+                    <button type="button" class="user-name">User 01 <i></i></button>
+                    <ul>
+                        <li><a href="#none">My page</a></li>
+                        <li><a href="#none">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main id="container">
+
+            <div class="task-wrap">
+
+                <div class="task-head">
+                    <div class="box-inner">
+                        <h2 class="task-title detail-title">AAA0001 (Type_A)</h2>
+                    </div>
+                </div>
+
+                <div class="task-detail">
+                    <div class="box-inner">
+                        <div class="img-info-box">
+                            <section class="express-select">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" name="expression" id="expression_less">
+                                        <label for="expression_less">Expressionless</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="expression" id="happy">
+                                        <label for="happy">Happy</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="expression" id="anger">
+                                        <label for="anger">Anger</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="expression" id="sad">
+                                        <label for="sad">Sad</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="expression" id="surprise">
+                                        <label for="surprise">Surprise</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="expression" id="celeb">
+                                        <label for="celeb">Celeb</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" name="expression" id="beard">
+                                        <label for="beard">Beard</label>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="caption-box">
+                                <h3>Caption</h3>
+                                <textarea>She has an orange hair.
+She has a hair band.
+She is wearing earrings.
+She is wearing blue shir.</textarea>
+                            </section>
+                            <section class="race-select">
+                                <h3>Race</h3>
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="race" id="korean">
+                                        <label for="korean">Korean</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="race" id="asian">
+                                        <label for="asian">Asian</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="race" id="white">
+                                        <label for="white">White</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="race" id="black">
+                                        <label for="black">Black</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="race" id="others">
+                                        <label for="others">Others</label>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="age-select">
+                                <h3>Age</h3>
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="age" id="lower_5">
+                                        <label for="lower_5">0~4</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="age" id="lower_10">
+                                        <label for="lower_10">5~9</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="age" id="lower_20">
+                                        <label for="lower_20">10~19</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="age" id="lower_30">
+                                        <label for="lower_30">20~29</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="age" id="lower_40">
+                                        <label for="lower_40">30~39</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="age" id="lower_50">
+                                        <label for="lower_50">40~49</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="age" id="lower_60">
+                                        <label for="lower_60">50~59</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="age" id="over_60">
+                                        <label for="over_60">60 over</label>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="gender-select">
+                                <h3>Gender</h3>
+                                <ul>
+                                    <li>
+                                        <input type="radio" name="gender" id="male">
+                                        <label for="male">Male</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="gender" id="female">
+                                        <label for="female">Female</label>
+                                    </li>
+                                </ul>
+                            </section>
+                            <section class="reject-box">
+                                <h3>Reject Reason</h3>
+                                <textarea>Add_all(del), Check face, head line,
+Delete empty space</textarea>
+                            </section>
+                        </div>
+
+                        <div class="img-confirm-box">
+                            <img src="../../img/exid_honey.jpg" alt="" class="object-img">
+
+                            <div class="confirm-btn-box">
+                                <button type="button" class="list-btn">List</button>
+                                <button type="button" class="temp-btn" onClick="javascript:layer_popup('#temp_confirm');">Temp</button>
+                                <button type="button" class="submit-btn" onClick="javascript:layer_popup('#submit_confirm');">Submit</button>
+                                <button type="button" class="final-approve-btn" onClick="javascript:layer_popup('#final_confirm');">Approve <span>(Final)</span></button>
+                            </div>
+                            <div class="copy-system">
+                                <span class="title">Copy count</span>
+                                <div class="count-select">
+                                    <select>
+                                        <option>1EA</option>
+                                        <option>2EA</option>
+                                    </select>
+                                </div>
+                                <button type="button" class="copy-btn">Copy</button>
+                            </div>
+                            <p class="guide-text">* 이미지속 인물이 2명 이상일 경우, 이미지를 복사(Copy)하여 사용할 수 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        <footer id="footer">
+            <p class="company-info">
+                <span>㈜케이티 대표이사 황창규</span><span>사업자등록번호 : 102-81-42945</span><span>통신판매업신고 : 2002-경기성남-0048</span>
+            </p>
+            <address>경기도 성남시 분당구 불정로 90 (정자동)</address>
+
+            <p class="copyright">Copyrightⓒ2018 KT corp. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- 컨펌 팝업 추가// -->
+    <div class="popup-dim">
+
+        <!-- 버튼의 클래스 layer_close은 닫는 기능을 위해 임의로 추가, 확인 취소 기능을 구현시 제거할것 -->
+
+        <div class="confirm-popup" id="temp_confirm">
+            <strong>임시 저장 안내</strong>
+            <p>임시 저장합니다.<br>작업 완료 후 최종 제출해 주세요.</p>
+            <div class="btn-box">
+                <button type="button" class="confirm-btn layer_close">확인</button>
+                <button type="button" class="cancel-btn layer_close">취소</button>
+            </div>
+        </div>
+
+        <div class="confirm-popup" id="submit_confirm">
+            <strong>최종 제출 확인</strong>
+            <p>최종 승인으로 바로 이동합니다.<br>제출 하시겠습니까?</p>
+            <div class="btn-box">
+                <button type="button" class="confirm-btn layer_close">확인</button>
+                <button type="button" class="cancel-btn layer_close">취소</button>
+            </div>
+        </div>
+
+        <div class="confirm-popup" id="final_confirm">
+            <strong>제출 확인</strong>
+            <p>제출 완료 후에 수정할 수 없습니다.<br>제출 하시겠습니까?</p>
+            <div class="btn-box">
+                <button type="button" class="confirm-btn layer_close">확인</button>
+                <button type="button" class="cancel-btn layer_close">취소</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- //컨펌 팝업 추가 -->
+
+</body>
+</html>

@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <title>KID</title>
+
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css">
+    <link type="text/css" rel="stylesheet" href="../../css/style.css">
+
+    <script type="text/javascript" src="../../js/jquery-1.12.4.min.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 10]>
+    <script type="text/javascript" src="../../js/placeholders.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/script.js"></script>
+</head>
+<body id="sub">
+    <div class="wrapper">
+        <header id="header">
+            <div class="box-inner">
+                <h1 class="logo"><a href="#none">KID, KT IMAGE DATASET</a></h1>
+
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="#none">Image Dataset</a></li>
+                        <li><a href="#none">Annotation Tool</a></li>
+                        <li class="active">
+                            <a href="#none">Admin</a>
+                            <ul class="sub-menu"><!-- 20180906 서브메뉴 추가 -->
+                                <li><a href="#none">이미지 데이터 관리</a></li>
+                                <li class="active"><a href="#none">항목 관리</a></li>
+                                <li><a href="#none">사용자 관리</a></li>
+                                <li><a href="#none">권한 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="user-menu">
+                    <button type="button" class="user-name">User 01 <i></i></button>
+                    <ul>
+                        <li><a href="#none">My page</a></li>
+                        <li><a href="#none">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main id="container">
+
+            <div class="task-wrap">
+
+                <div class="task-head">
+                    <div class="box-inner">
+                        <h2 class="task-title">항목 관리</h2>
+                        <div class="task-tab admin-tab">
+                            <ul>
+                                <li><button type="button">Type 관리</button></li>
+                                <li><button type="button">Object 관리</button></li>
+                                <li><button type="button">Meta 관리</button></li>
+                            </ul>
+                        </div>
+
+                        <button type="button" class="btn-type-making task-sub" onClick="javascript:layer_popup('#type_making');">Type 등록</button>
+                        <button type="button" class="btn-object-making task-sub" onClick="javascript:layer_popup('#object_making');">Object 등록</button>
+                        <button type="button" class="btn-meta-making task-sub" onClick="javascript:layer_popup('#meta_making');">Meta 등록</button>
+                    </div>
+                </div>
+
+                <div class="task-list">
+                    <div class="box-inner">
+                        <table>
+                            <colgroup>
+                                <col width="120">
+                                <col width="120">
+                                <col width="*">
+                                <col width="174">
+                                <col width="174">
+                                <col width="176">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">No.</th>
+                                    <th scope="col">
+                                        Type Name
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">조회 권한</th>
+                                    <th scope="col">다운 권한</th>
+                                    <th scope="col">Image</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">A</a></td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">person, upper body</a></td>
+                                    <td>Search A</td>
+                                    <td>Download A</td>
+                                    <td>10,000</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">B</a></td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">person, upper body</a></td>
+                                    <td>N/A</td>
+                                    <td>N/A</td>
+                                    <td>20,000</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">B</a></td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">face</a></td>
+                                    <td>Search B</td>
+                                    <td>Download B</td>
+                                    <td>12,000</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">C</a></td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">celeb</a></td>
+                                    <td>Search C</td>
+                                    <td>Download C</td>
+                                    <td>6,000</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">C</a></td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">person, upper body, face, right eye, left eye, lip, right hand</a></td>
+                                    <td>N/A</td>
+                                    <td>N/A</td>
+                                    <td>12,000</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">D</a></td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">person, face</a></td>
+                                    <td>N/A</td>
+                                    <td>N/A</td>
+                                    <td>6,000</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">D</a></td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">person, upper body</a></td>
+                                    <td>Search D</td>
+                                    <td>Download D</td>
+                                    <td>10,000</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">E</a></td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">person, upper body</a></td>
+                                    <td>Search E</td>
+                                    <td>Download E</td>
+                                    <td>20,000</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">E</a></td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">person, face</a></td>
+                                    <td>N/A</td>
+                                    <td>N/A</td>
+                                    <td>6,000</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">E</a></td>
+                                    <td><a href="javascript:layer_popup('#type_modifying');">person, upper body</a></td>
+                                    <td>Search E</td>
+                                    <td>Download E</td>
+                                    <td>10,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="paging-box">
+                            <button type="button" class="btn-paging first-page">Go to First page</button>
+                            <button type="button" class="btn-paging prev-page">Go to Prev page</button>
+                            <ul class="paging-num">
+                                <li class="active"><button type="button">1</button></li>
+                                <li><button type="button">2</button></li>
+                                <li><button type="button">3</button></li>
+                                <li><button type="button">4</button></li>
+                                <li><button type="button">5</button></li>
+                            </ul>
+                            <button type="button" class="btn-paging next-page enabled">Go to Next page</button>
+                            <button type="button" class="btn-paging last-page enabled">Go to Last page</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="task-list">
+                    <div class="box-inner">
+                        <table>
+                            <colgroup>
+                                <col width="120">
+                                <col width="140">
+                                <col width="140">
+                                <col width="*">
+                                <col width="176">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">No.</th>
+                                    <th scope="col">
+                                        Object Name
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        Object
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                    <th scope="col">Description</th>
+                                    <th scope="col">Image</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">all</a></td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">전경</a></td>
+                                    <td><span class="ellipsis">object를 기준으로 들고있는 물건 또는 착용하고 있는 제품은 다음과 같습니다.</span></td>
+                                    <td>10,000</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">person</a></td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">전경</a></td>
+                                    <td><span class="ellipsis">Object 전체 (착용한 것은 포함 / 들고 있는 것은 제외)</span></td>
+                                    <td>20,000</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">upper body</a></td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">상반신</a></td>
+                                    <td><span class="ellipsis">허리 기준으로 위쪽</span></td>
+                                    <td>12,000</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">head</a></td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">머리</a></td>
+                                    <td><span class="ellipsis">악세서리 (모자, 스카프, 터번, 선글라스, 귀걸이, 코걸이 등 함께 작성해주세요.</span></td>
+                                    <td>6,000</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">face</a></td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">얼굴</a></td>
+                                    <td><span class="ellipsis">안경, 마스크, 수염 포함 / 귀 제외</span></td>
+                                    <td>12,000</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">right eye</a></td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">오른쪽 눈</a></td>
+                                    <td><span class="ellipsis">이미지 내 object 기준 오른쪽 눈</span></td>
+                                    <td>6,000</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">left eye</a></td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">왼쪽 눈</a></td>
+                                    <td><span class="ellipsis">이미지 내 object 기준 왼쪽 눈</span></td>
+                                    <td>10,000</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">upper body</a></td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">상반신</a></td>
+                                    <td><span class="ellipsis">object 기준으로 착용하고 있는 악세서리는 모두 포함하여 작성해주세요.</span></td>
+                                    <td>20,000</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">head</a></td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">머리</a></td>
+                                    <td><span class="ellipsis">악세서리 (모자, 스카프, 터번, 선글라스, 귀걸이, 코걸이 등 함께 작성해주세요.</span></td>
+                                    <td>6,000</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">face</a></td>
+                                    <td><a href="javascript:layer_popup('#object_modifying');">얼굴</a></td>
+                                    <td><span class="ellipsis">안경, 마스크, 수염 포함 / 귀 제외</span></td>
+                                    <td>20,000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="paging-box">
+                            <button type="button" class="btn-paging first-page">Go to First page</button>
+                            <button type="button" class="btn-paging prev-page">Go to Prev page</button>
+                            <ul class="paging-num">
+                                <li class="active"><button type="button">1</button></li>
+                                <li><button type="button">2</button></li>
+                                <li><button type="button">3</button></li>
+                                <li><button type="button">4</button></li>
+                                <li><button type="button">5</button></li>
+                            </ul>
+                            <button type="button" class="btn-paging next-page enabled">Go to Next page</button>
+                            <button type="button" class="btn-paging last-page enabled">Go to Last page</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="task-list">
+                    <div class="box-inner">
+                        <table>
+                            <colgroup>
+                                <col width="120">
+                                <col width="140">
+                                <col width="140">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th scope="col">No.</th>
+                                <th scope="col">
+                                    Meta Name
+                                    <div class="sort-btn-box">
+                                        <button type="button" class="sort-up active">오름차순</button>
+                                        <button type="button" class="sort-down">내림차순</button>
+                                    </div>
+                                </th>
+                                <th scope="col">
+                                    Object
+                                </th>
+                                <th scope="col">Meta Data</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><a href="javascript:layer_popup('#meta_modifying');">person</a></td>
+                                <td><i class="icon-tag"></i></td>
+                                <td><span class="ellipsis center">ㅡ</span></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><a href="javascript:layer_popup('#meta_modifying');">person</a></td>
+                                <td><i class="icon-tag"></i></td>
+                                <td><span class="ellipsis center">ㅡ</span></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><a href="javascript:layer_popup('#meta_modifying');">Location</a></td>
+                                <td><i class="icon-only"></i></td>
+                                <td><span class="ellipsis center">left / center / right</span></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><a href="javascript:layer_popup('#meta_modifying');">Type</a></td>
+                                <td><i class="icon-only"></i></td>
+                                <td><span class="ellipsis center">body / top / face</span></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><a href="javascript:layer_popup('#meta_modifying');">Race</a></td>
+                                <td><i class="icon-tag"></i></td>
+                                <td><span class="ellipsis center">korean / asian / white / black / others</span></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td><a href="javascript:layer_popup('#meta_modifying');">Caption</a></td>
+                                <td><i class="icon-caption"></i></td>
+                                <td><span class="ellipsis center">ㅡ</span></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td><a href="javascript:layer_popup('#meta_modifying');">Gender</a></td>
+                                <td><i class="icon-tag"></i></td>
+                                <td><span class="ellipsis center">male / female</span></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td><a href="javascript:layer_popup('#meta_modifying');">Happy</a></td>
+                                <td><i class="icon-only"></i></td>
+                                <td><span class="ellipsis center">true or false</span></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td><a href="javascript:layer_popup('#meta_modifying');">Race</a></td>
+                                <td><i class="icon-tag"></i></td>
+                                <td><span class="ellipsis center">korean / asian / white / black / others</span></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td><a href="javascript:layer_popup('#meta_modifying');">Race</a></td>
+                                <td><i class="icon-tag"></i></td>
+                                <td><span class="ellipsis center">korean / asian / white / black / others</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="paging-box">
+                            <button type="button" class="btn-paging first-page">Go to First page</button>
+                            <button type="button" class="btn-paging prev-page">Go to Prev page</button>
+                            <ul class="paging-num">
+                                <li class="active"><button type="button">1</button></li>
+                                <li><button type="button">2</button></li>
+                                <li><button type="button">3</button></li>
+                                <li><button type="button">4</button></li>
+                                <li><button type="button">5</button></li>
+                            </ul>
+                            <button type="button" class="btn-paging next-page enabled">Go to Next page</button>
+                            <button type="button" class="btn-paging last-page enabled">Go to Last page</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        <footer id="footer">
+            <p class="company-info">
+                <span>㈜케이티 대표이사 황창규</span><span>사업자등록번호 : 102-81-42945</span><span>통신판매업신고 : 2002-경기성남-0048</span>
+            </p>
+            <address>경기도 성남시 분당구 불정로 90 (정자동)</address>
+
+            <p class="copyright">Copyrightⓒ2018 KT corp. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- 컨펌 팝업 추가// -->
+    <div class="popup-dim">
+
+        <!-- 버튼의 클래스 layer_close은 닫는 기능을 위해 임의로 추가, 확인 취소 기능을 구현시 제거할것 -->
+
+        <!-- Type 팝업// -->
+        <div class="confirm-popup input-popup" id="type_making">
+            <strong class="popup-title">
+                <i class="icon-type"></i>
+                Type 등록
+            </strong>
+            <div class="input-form">
+                <div class="input-part">
+                    <p class="input-name">Type Name</p>
+                    <div class="input-box">
+                        <input type="text" placeholder="Please write type name">
+                    </div>
+                </div>
+                <div class="input-part textarea">
+                    <p class="input-name">Description</p>
+                    <div class="input-box">
+                        <textarea placeholder="Please write Description"></textarea>
+                    </div>
+                </div>
+                <div class="input-part power-select">
+                    <p class="input-name">조회 권한</p>
+                    <div class="input-box">
+                        <div class="select-ui">
+                            <button type="button" class="select-value placeholder">Select Auth</button>
+                            <div class="select-box">
+                                <ul class="select-list">
+                                    <li><button type="button">Search A</button></li>
+                                    <li><button type="button">Search B</button></li>
+                                    <li><button type="button">Search C</button></li>
+                                    <li><button type="button">Search D</button></li>
+                                    <li><button type="button">Search E</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-part power-select">
+                    <p class="input-name">다운 권한</p>
+                    <div class="input-box">
+                        <div class="select-ui">
+                            <button type="button" class="select-value placeholder">Select Auth</button>
+                            <div class="select-box">
+                                <ul class="select-list">
+                                    <li><button type="button">Download A</button></li>
+                                    <li><button type="button">Download B</button></li>
+                                    <li><button type="button">Download C</button></li>
+                                    <li><button type="button">Download D</button></li>
+                                    <li><button type="button">Download E</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-part power-select">
+                    <p class="input-name">관리자 권한</p>
+                    <div class="input-box">
+                        <div class="select-ui">
+                            <button type="button" class="select-value placeholder">Select Auth</button>
+                            <div class="select-box">
+                                <ul class="select-list">
+                                    <li><button type="button">job_admin_A</button></li>
+                                    <li><button type="button">job_admin_B</button></li>
+                                    <li><button type="button">job_admin_C</button></li>
+                                    <li><button type="button">job_admin_D</button></li>
+                                    <li><button type="button">job_admin_E</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-part obj-meta">
+                    <p class="input-name">Object</p>
+                    <div class="input-box">
+                        <div class="select-ui">
+                            <button type="button" class="select-value placeholder">Select Object</button>
+                            <div class="select-box">
+                                <ul class="select-list">
+                                    <li><button type="button">all</button></li>
+                                    <li><button type="button">face</button></li>
+                                    <li><button type="button">lip</button></li>
+                                    <li><button type="button">upper body</button></li>
+                                    <li><button type="button">right hand</button></li>
+                                    <li><button type="button">left hand</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="input-name">Meta</p>
+                    <div class="input-box">
+                        <div class="select-ui">
+                            <button type="button" class="select-value placeholder">Select Auth</button>
+                            <div class="select-box">
+                                <ul class="select-list">
+                                    <li><button type="button">Happy</button></li>
+                                    <li><button type="button">Sadness</button></li>
+                                    <li><button type="button">Blank face</button></li>
+                                    <li><button type="button">Female</button></li>
+                                    <li><button type="button">Male</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="obj-meta-ex">* Object, Meta 정보를 선택하시면 아래에 항목이 추가됩니다.</p>
+            </div>
+            <div class="btn-box">
+                <input type="button" class="confirm-btn2 layer_close" value="확인">
+                <button type="button" class="cancel-btn layer_close">취소</button>
+            </div>
+        </div>
+
+        <!-- Type 수정팝업 -->
+        <div class="confirm-popup input-popup" id="type_modifying">
+            <strong class="popup-title">
+                <i class="icon-type"></i>
+                Type 수정
+            </strong>
+            <div class="input-form">
+                <div class="input-part">
+                    <p class="input-name">Type Name</p>
+                    <div class="input-box">
+                        <input type="text" placeholder="Please write type name" value="A">
+                        <p class="duplicating-guide">중복된 Type name 입니다.</p>
+                    </div>
+                </div>
+                <div class="input-part textarea">
+                    <p class="input-name">Description</p>
+                    <div class="input-box">
+                        <textarea placeholder="Please write Description">person, upper body, face</textarea>
+                    </div>
+                </div>
+                <div class="input-part power-select">
+                    <p class="input-name">조회 권한</p>
+                    <div class="input-box">
+                        <div class="select-ui">
+                            <button type="button" class="select-value">Search B</button>
+                            <!-- 선택된 option이 있는 경우
+                            $(".select-value").removeClass("placeholder"); 그리고
+                            ".selet-box li.active > button"의 .html()를 가져온다. -->
+                            <div class="select-box">
+                                <ul class="select-list">
+                                    <li><button type="button">Search A</button></li>
+                                    <li class="active"><button type="button">Search B</button></li>
+                                    <li><button type="button">Search C</button></li>
+                                    <li><button type="button">Search D</button></li>
+                                    <li><button type="button">Search E</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-part power-select">
+                    <p class="input-name">다운 권한</p>
+                    <div class="input-box">
+                        <div class="select-ui">
+                            <button type="button" class="select-value">Download B</button>
+                            <!-- 선택된 option이 있는 경우
+                            $(".select-value").removeClass("placeholder"); 그리고
+                            ".selet-box li.active > button"의 .html()를 가져온다. -->
+                            <div class="select-box">
+                                <ul class="select-list">
+                                    <li><button type="button">Download A</button></li>
+                                    <li class="active"><button type="button">Download B</button></li>
+                                    <li><button type="button">Download C</button></li>
+                                    <li><button type="button">Download D</button></li>
+                                    <li><button type="button">Download E</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-part power-select">
+                    <p class="input-name">관리자 권한</p>
+                    <div class="input-box">
+                        <div class="select-ui">
+                            <button type="button" class="select-value">job_admin_B</button>
+                            <!-- 선택된 option이 있는 경우
+                            $(".select-value").removeClass("placeholder"); 그리고
+                            ".selet-box li.active > button"의 .html()를 가져온다. -->
+                            <div class="select-box">
+                                <ul class="select-list">
+                                    <li><button type="button">job_admin_A</button></li>
+                                    <li class="active"><button type="button">job_admin_B</button></li>
+                                    <li><button type="button">job_admin_C</button></li>
+                                    <li><button type="button">job_admin_D</button></li>
+                                    <li><button type="button">job_admin_E</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="input-part obj-meta">
+                    <p class="input-name">Object</p>
+                    <div class="input-box">
+                        <div class="select-ui">
+                            <button type="button" class="select-value">upper body</button>
+                            <!-- 선택된 option이 있는 경우
+                            $(".select-value").removeClass("placeholder"); 그리고
+                            ".selet-box li.active > button"의 .html()를 가져온다. -->
+                            <div class="select-box">
+                                <ul class="select-list">
+                                    <li><button type="button">all</button></li>
+                                    <li><button type="button">face</button></li>
+                                    <li><button type="button">lip</button></li>
+                                    <li class="active"><button type="button">upper body</button></li>
+                                    <li><button type="button">right hand</button></li>
+                                    <li><button type="button">left hand</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="input-name">Meta</p>
+                    <div class="input-box">
+                        <div class="select-ui">
+                            <button type="button" class="select-value">Happy</button>
+                            <!-- 선택된 option이 있는 경우
+                            $(".select-value").removeClass("placeholder"); 그리고
+                            ".selet-box li.active > button"의 .html()를 가져온다. -->
+                            <div class="select-box">
+                                <ul class="select-list">
+                                    <li class="active"><button type="button">Happy</button></li>
+                                    <li><button type="button">Sadness</button></li>
+                                    <li><button type="button">Blank face</button></li>
+                                    <li><button type="button">Female</button></li>
+                                    <li><button type="button">Male</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="obj-meta-ex">* Object, Meta 정보를 선택하시면 아래에 항목이 추가됩니다.</p>
+                <div class="entered-value">
+                    <div class="value-box obj-box">
+                        <ul>
+                            <li><button type="button">all</button></li>
+                            <li><button type="button">person</button></li>
+                            <li><button type="button">head</button></li>
+                            <li><button type="button">face</button></li>
+                            <li><button type="button">upper body</button></li>
+                        </ul>
+                    </div>
+                    <div class="value-box meta-box">
+                        <ul>
+                            <li><button type="button">Race</button></li>
+                            <li><button type="button">Gender</button></li>
+                            <li><button type="button">Surprised</button></li>
+                            <li><button type="button">Surprised</button></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box">
+                <input type="button" class="confirm-btn2 layer_close" value="확인">
+                <button type="button" class="cancel-btn layer_close">취소</button>
+            </div>
+        </div>
+        <!-- //Type 팝업 -->
+
+        <!-- Obj 팝업// -->
+        <div class="confirm-popup input-popup" id="object_making">
+            <strong class="popup-title">
+                <i class="icon-object"></i>
+                Object 등록
+            </strong>
+            <div class="input-form">
+                <div class="input-part">
+                    <p class="input-name">Object Name</p>
+                    <div class="input-box">
+                        <input type="text" placeholder="Please write object name">
+                    </div>
+                </div>
+                <div class="input-part">
+                    <p class="input-name">Object</p>
+                    <div class="input-box">
+                        <input type="text" placeholder="Please write object">
+                    </div>
+                </div>
+                <div class="input-part textarea">
+                    <p class="input-name">Description</p>
+                    <div class="input-box">
+                        <textarea placeholder="Please write Description"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box">
+                <input type="button" class="confirm-btn2 layer_close" value="확인">
+                <button type="button" class="cancel-btn layer_close">취소</button>
+            </div>
+        </div>
+
+        <!-- Object 수정팝업 -->
+        <div class="confirm-popup input-popup" id="object_modifying">
+            <strong class="popup-title">
+                <i class="icon-object"></i>
+                Object 수정
+            </strong>
+            <div class="input-form">
+                <div class="input-part">
+                    <p class="input-name">Object Name</p>
+                    <div class="input-box">
+                        <input type="text" placeholder="Please write object name" value="all">
+                        <p class="duplicating-guide">중복된 Object name 입니다.</p>
+                    </div>
+                </div>
+                <div class="input-part">
+                    <p class="input-name">Object</p>
+                    <div class="input-box">
+                        <input type="text" placeholder="Please write object" value="전경">
+                    </div>
+                </div>
+                <div class="input-part textarea">
+                    <p class="input-name">Description</p>
+                    <div class="input-box">
+                        <textarea placeholder="Please write Description" style="height:130px;">object를 기준으로 들고 있는 물건 또는 착용하고 있는 모든 것.
+이미지 내 object(사람)이 여러명이고 object가 붙어 있는 경우, 붙어있는 object를 하나의 전경으로 취급함.
+또한 악세서리 (모자, 스카프, 터번, 선글라스, 귀걸이, 코걸이 등)은 모두 포함함.</textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box">
+                <input type="button" class="confirm-btn2 layer_close" value="확인">
+                <button type="button" class="cancel-btn layer_close">취소</button>
+            </div>
+        </div>
+        <!-- //Obj 팝업 -->
+
+        <!-- Meta 팝업// -->
+        <div class="confirm-popup input-popup" id="meta_making">
+            <strong class="popup-title">
+                <i class="icon-meta"></i>
+                Meta 등록
+            </strong>
+            <div class="input-form">
+                <div class="input-part">
+                    <p class="input-name">Meta Name</p>
+                    <div class="input-box">
+                        <input type="text" placeholder="Please write meta name">
+                    </div>
+                </div>
+                <div class="input-part textarea">
+                    <p class="input-name">Description</p>
+                    <div class="input-box">
+                        <textarea placeholder="Please write Description"></textarea>
+                    </div>
+                </div>
+                <div class="input-part">
+                    <p class="input-name">Meta-Dat 전신</p>
+                    <div class="input-box">
+                        <div class="select-ui">
+                            <button type="button" class="select-value placeholder">Select Type</button>
+                            <!-- 선택된 option이 있는 경우
+                            $(".select-value").removeClass("placeholder"); 그리고
+                            ".selet-box li.active > button"의 .html()를 가져온다. -->
+                            <div class="select-box">
+                                <ul>
+                                    <li><button type="button"><i class="icon-tag"></i><span class="text-box">태그형</span></button></li>
+                                    <li><button type="button"><i class="icon-caption"></i><span class="text-box">장문형 (Caption)</span></button></li>
+                                    <li><button type="button"><i class="icon-only"></i><span class="text-box">단일 선택형</span></button></li>
+                                    <li><button type="button"><i class="icon-circle" style="background-image:url('../../img/icon_circle.png');"></i><span class="text-box">Center</span></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-option-box">
+                    <button type="button" class="add-btn">+  옵션 추가</button>
+                </div>
+            </div>
+            <div class="btn-box">
+                <input type="button" class="confirm-btn2 layer_close" value="확인">
+                <button type="button" class="cancel-btn layer_close">취소</button>
+            </div>
+        </div>
+        <script type="text/javascript">
+            // UI 셀렉트 옵션 추가
+            $(document).on("click", ".add-option-box .add-btn", function(){
+                var add_option = "<div class=\"adding-option\"><input type=\"text\" style=\"background-image:url('../../img/icon_circle.png');\"></div>"
+                $(this).parent(".add-option-box").prepend(add_option);
+            });
+        </script>
+        <!-- Meta 수정팝업 -->
+        <div class="confirm-popup input-popup" id="meta_modifying">
+            <strong class="popup-title">
+                <i class="icon-meta"></i>
+                Meta 수정
+            </strong>
+            <div class="input-form">
+                <div class="input-part">
+                    <p class="input-name">Meta Name</p>
+                    <div class="input-box">
+                        <input type="text" placeholder="Please write meta name" value="Location">
+                        <p class="duplicating-guide">중복된 Meta name 입니다.</p>
+                    </div>
+                </div>
+                <div class="input-part textarea">
+                    <p class="input-name">Description</p>
+                    <div class="input-box">
+                        <textarea placeholder="Please write Description">이미지 속 사람의 수, 얼굴 전체가 나와야 함. (최대 3명)</textarea>
+                    </div>
+                </div>
+                <div class="input-part">
+                    <p class="input-name">Meta-Dat 전신</p>
+                    <div class="input-box">
+                        <div class="select-ui">
+                            <button type="button" class="select-value"><i class="icon-only"></i><span class="text-box">단일 선택형</span></button>
+                            <div class="select-box">
+                                <ul>
+                                    <li><button type="button"><i class="icon-tag"></i><span class="text-box">태그형</span></button></li>
+                                    <li><button type="button"><i class="icon-caption"></i><span class="text-box">장문형 (Caption)</span></button></li>
+                                    <li class="active"><button type="button"><i class="icon-only"></i><span class="text-box">단일 선택형</span></button></li>
+                                    <li><button type="button"><i class="icon-circle" style="background-image:url('../../img/icon_circle.png');"></i><span class="text-box">Center</span></button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="add-option-box">
+                    <button type="button" class="add-btn">+  옵션 추가</button>
+                </div>
+            </div>
+            <div class="btn-box">
+                <input type="button" class="confirm-btn2 layer_close" value="확인">
+                <button type="button" class="cancel-btn layer_close">취소</button>
+            </div>
+        </div>
+        <!-- //Meta 팝업 -->
+
+    </div>
+    <!-- //컨펌 팝업 추가 -->
+
+</body>
+</html>

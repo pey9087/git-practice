@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <title>KID</title>
+
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css">
+    <link type="text/css" rel="stylesheet" href="../../css/style.css">
+
+    <script type="text/javascript" src="../../js/jquery-1.12.4.min.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 10]>
+    <script type="text/javascript" src="../../js/placeholders.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/script.js"></script>
+</head>
+<body id="sub">
+    <div class="wrapper">
+        <header id="header">
+            <div class="box-inner">
+                <h1 class="logo"><a href="#none">KID, KT IMAGE DATASET</a></h1>
+
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="#none">Image Dataset</a></li>
+                        <li><a href="#none">Annotation Tool</a></li>
+                        <li class="active">
+                            <a href="#none">Admin</a>
+                            <ul class="sub-menu"><!-- 20180906 서브메뉴 추가 -->
+                                <li class="active"><a href="#none">이미지 데이터 관리</a></li>
+                                <li><a href="#none">항목 관리</a></li>
+                                <li><a href="#none">사용자 관리</a></li>
+                                <li><a href="#none">권한 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="user-menu">
+                    <button type="button" class="user-name">User 01 <i></i></button>
+                    <ul>
+                        <li><a href="#none">My page</a></li>
+                        <li><a href="#none">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main id="container">
+
+            <div class="task-wrap">
+
+                <div class="task-head">
+                    <div class="box-inner">
+                        <h2 class="task-title">이미지 데이터 관리</h2>
+                        <script type="text/javascript">
+                            $(document).ready(function(){
+                                task_tab(1);
+                            });
+                        </script>
+                        <div class="task-tab admin-tab">
+                            <ul>
+                                <li><button type="button">업로드</button></li>
+                                <li><button type="button">작업 배정</button></li>
+                            </ul>
+                        </div>
+
+                        <button type="button" class="btn-folder-making task-sub" onClick="javascript:layer_popup('#folder_making');">폴더 등록</button>
+                    </div>
+                </div>
+
+                <div class="task-list">
+                    <div class="box-inner">
+                        <table>
+                            <colgroup>
+                                <col width="100">
+                                <col width="140">
+                                <col width="100">
+                                <col width="100">
+                                <col width="*">
+                                <col width="80">
+                                <col width="132">
+                                <col width="132">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">No.</th>
+                                    <th scope="col">
+                                        폴더명
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        Type
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        이미지 수
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                    <th scope="col">
+                                        마지막 수정일
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                    <th scope="col">폴더 속성</th>
+                                    <th scope="col">Download</th>
+                                    <th scope="col">Upload</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><a href="#none">2018010</a></td>
+                                    <td>B</td>
+                                    <td>2500</td>
+                                    <td>2018.08.17 &nbsp;00:06:04.0</td>
+                                    <td><button type="button" class="btn-folder-info">폴더속성 보기</button></td>
+                                    <td><button type="button" class="btn-download">Download</button></td>
+                                    <td><button type="button" class="btn-upload" onClick="javascript:layer_popup('#file_upload');">Upload</button></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><a href="#none">2018010</a></td>
+                                    <td>B</td>
+                                    <td>2500</td>
+                                    <td>2018.08.17 &nbsp;00:06:04.0</td>
+                                    <td><button type="button" class="btn-folder-info">폴더속성 보기</button></td>
+                                    <td><button type="button" class="btn-download">Download</button></td>
+                                    <td><button type="button" class="btn-upload" onClick="javascript:layer_popup('#file_upload');">Upload</button></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><a href="#none">2018010</a></td>
+                                    <td>B</td>
+                                    <td>2500</td>
+                                    <td>2018.08.17 &nbsp;00:06:04.0</td>
+                                    <td><button type="button" class="btn-folder-info">폴더속성 보기</button></td>
+                                    <td><button type="button" class="btn-download">Download</button></td>
+                                    <td><button type="button" class="btn-upload" onClick="javascript:layer_popup('#file_upload');">Upload</button></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><a href="#none">2018010</a></td>
+                                    <td>B</td>
+                                    <td>2500</td>
+                                    <td>2018.08.17 &nbsp;00:06:04.0</td>
+                                    <td><button type="button" class="btn-folder-info">폴더속성 보기</button></td>
+                                    <td><button type="button" class="btn-download">Download</button></td>
+                                    <td><button type="button" class="btn-upload" onClick="javascript:layer_popup('#file_upload');">Upload</button></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><a href="#none">2018010</a></td>
+                                    <td>B</td>
+                                    <td>2500</td>
+                                    <td>2018.08.17 &nbsp;00:06:04.0</td>
+                                    <td><button type="button" class="btn-folder-info">폴더속성 보기</button></td>
+                                    <td><button type="button" class="btn-download">Download</button></td>
+                                    <td><button type="button" class="btn-upload" onClick="javascript:layer_popup('#file_upload');">Upload</button></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><a href="#none">2018010</a></td>
+                                    <td>B</td>
+                                    <td>2500</td>
+                                    <td>2018.08.17 &nbsp;00:06:04.0</td>
+                                    <td><button type="button" class="btn-folder-info">폴더속성 보기</button></td>
+                                    <td><button type="button" class="btn-download">Download</button></td>
+                                    <td><button type="button" class="btn-upload" onClick="javascript:layer_popup('#file_upload');">Upload</button></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td><a href="#none">2018010</a></td>
+                                    <td>B</td>
+                                    <td>2500</td>
+                                    <td>2018.08.17 &nbsp;00:06:04.0</td>
+                                    <td><button type="button" class="btn-folder-info">폴더속성 보기</button></td>
+                                    <td><button type="button" class="btn-download">Download</button></td>
+                                    <td><button type="button" class="btn-upload" onClick="javascript:layer_popup('#file_upload');">Upload</button></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td><a href="#none">2018010</a></td>
+                                    <td>B</td>
+                                    <td>2500</td>
+                                    <td>2018.08.17 &nbsp;00:06:04.0</td>
+                                    <td><button type="button" class="btn-folder-info">폴더속성 보기</button></td>
+                                    <td><button type="button" class="btn-download">Download</button></td>
+                                    <td><button type="button" class="btn-upload" onClick="javascript:layer_popup('#file_upload');">Upload</button></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td><a href="#none">2018010</a></td>
+                                    <td>B</td>
+                                    <td>2500</td>
+                                    <td>2018.08.17 &nbsp;00:06:04.0</td>
+                                    <td><button type="button" class="btn-folder-info">폴더속성 보기</button></td>
+                                    <td><button type="button" class="btn-download">Download</button></td>
+                                    <td><button type="button" class="btn-upload" onClick="javascript:layer_popup('#file_upload');">Upload</button></td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td><a href="#none">2018010</a></td>
+                                    <td>B</td>
+                                    <td>2500</td>
+                                    <td>2018.08.17 &nbsp;00:06:04.0</td>
+                                    <td><button type="button" class="btn-folder-info">폴더속성 보기</button></td>
+                                    <td><button type="button" class="btn-download">Download</button></td>
+                                    <td><button type="button" class="btn-upload" onClick="javascript:layer_popup('#file_upload');">Upload</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="paging-box">
+                            <button type="button" class="btn-paging first-page">Go to First page</button>
+                            <button type="button" class="btn-paging prev-page">Go to Prev page</button>
+                            <ul class="paging-num">
+                                <li class="active"><button type="button">1</button></li>
+                                <li><button type="button">2</button></li>
+                                <li><button type="button">3</button></li>
+                                <li><button type="button">4</button></li>
+                                <li><button type="button">5</button></li>
+                            </ul>
+                            <button type="button" class="btn-paging next-page enabled">Go to Next page</button>
+                            <button type="button" class="btn-paging last-page enabled">Go to Last page</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="task-list">
+                    <div class="box-inner">
+                        <div class="assign-srh">
+                            <p class="worker-id">작업자 ID :  annot 02</p>
+                            <p class="srh-guide">작업 배정할 이미지 Type과 수량 입력 뒤, 검색 버튼을 누르시면 이미지 정보를 확인하실 수 있습니다.</p>
+
+                            <div class="input-form srh-line">
+                                <div class="input-part">
+                                    <p class="input-name">이미지 Type</p>
+                                    <div class="input-box select-outbox">
+                                        <div class="select-ui">
+                                            <button type="button" class="select-value placeholder">Select Image Type</button>
+                                            <div class="select-box">
+                                                <ul class="select-list">
+                                                    <li><button type="button">TYPE_A</button></li>
+                                                    <li><button type="button">TYPE_B</button></li>
+                                                    <li><button type="button">TYPE_C</button></li>
+                                                    <li><button type="button">TYPE_D</button></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-part">
+                                    <p class="input-name">배정 이미지 수량</p>
+                                    <div class="input-box">
+                                        <input type="text" placeholder="Please enter a quantity">
+                                    </div>
+                                </div>
+                                <button type="button" class="assign-srh-btn">Search</button>
+                            </div>
+
+                        </div>
+                        <div class="assign-srh-result">
+                            <table>
+                                <colgroup>
+                                    <col width="280">
+                                    <col width="280">
+                                    <col width="*">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Folder</th>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">Count</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="ellipsis">annot 01/2018012/TYPE_B/a annot 01/2018012/TYPE_B/a annot 01/2018012/TYPE_B/a</span></td>
+                                        <td>AAC03906 외 123장</td><!-- 갯수를 아래에도 동일하게 넣어주세요 -->
+                                        <td>
+                                            124
+                                            <button type="button" class="btn-assign">Assign</button>
+                                        </td>
+                                    </tr>
+                                    <tr class="srh-detail">
+                                        <td>&nbsp;</td>
+                                        <td colspan="2">
+                                            <div class="list-center">
+                                                <div class="srh-align">
+                                                    <span class="hidden">AAC03906 외 123장</span><!-- 윗부분과 동일하게 넣어주세요 -->
+                                                    <div class="srh-list">
+                                                        <p>AAC03906</p>
+                                                        <p>AAC06129</p>
+                                                        <p>AAC06134</p>
+                                                        <p>AAC06191</p>
+                                                        <p>AC06205</p>
+                                                        <p>AAC06250</p>
+                                                        <p>AAC06250</p>
+                                                        <p>AAC06250</p>
+                                                    </div>
+                                                </div>
+                                                <script type="text/javascript">
+                                                    $(document).ready(function(){
+                                                        var offsetBox_left = $(".offset-box").offset().left;
+                                                        var srhList_left = $(".srh-list").offset().left;
+                                                        var srhList_width = offsetBox_left - srhList_left;// 검색목록 정렬과 너비
+
+                                                        $(".srh-list").width(srhList_width).mCustomScrollbar({
+                                                            scrollInertia: 300
+                                                        });
+                                                    });
+                                                </script>
+                                            </div>
+                                            <span class="offset-box"></span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        <footer id="footer">
+            <p class="company-info">
+                <span>㈜케이티 대표이사 황창규</span><span>사업자등록번호 : 102-81-42945</span><span>통신판매업신고 : 2002-경기성남-0048</span>
+            </p>
+            <address>경기도 성남시 분당구 불정로 90 (정자동)</address>
+
+            <p class="copyright">Copyrightⓒ2018 KT corp. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <!-- 컨펌 팝업 추가// -->
+    <div class="popup-dim">
+
+        <!-- 버튼의 클래스 layer_close은 닫는 기능을 위해 임의로 추가, 확인 취소 기능을 구현시 제거할것 -->
+
+        <div class="confirm-popup input-popup" id="folder_making">
+            <strong class="popup-title">
+                <i class="icon-folder"></i>
+                폴더 등록
+            </strong>
+            <div class="input-form">
+                <div class="input-part">
+                    <p class="input-name">Folder Name</p>
+                    <div class="input-box">
+                        <input type="text" placeholder="Please write folder name">
+                    </div>
+                </div>
+                <div class="input-part textarea">
+                    <p class="input-name">Folder Description</p>
+                    <div class="input-box">
+                        <textarea placeholder="Please write Description"></textarea>
+                    </div>
+                </div>
+                <div class="input-part">
+                    <p class="input-name">Image Type</p>
+                    <div class="input-box">
+                        <div class="select-ui">
+                            <button type="button" class="select-value placeholder">Select Image Type</button>
+                            <div class="select-box">
+                                <ul class="select-list">
+                                    <li><button type="button">TYPE_A</button></li>
+                                    <li><button type="button">TYPE_B</button></li>
+                                    <li><button type="button">TYPE_C</button></li>
+                                    <li><button type="button">TYPE_D</button></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-box">
+                <input type="button" class="confirm-btn2 layer_close" value="확인" disabled>
+                <button type="button" class="cancel-btn layer_close">취소</button>
+            </div>
+        </div>
+
+        <div class="confirm-popup input-popup" id="file_upload">
+            <strong class="popup-title">
+                <i class="icon-upload"></i>
+                Upload
+            </strong>
+            <div class="input-form">
+                <input type="file" id="file_input" class="file-input">
+                <div class="drag-label"></div>
+                <label for="file_input" class="file-label">Choose files</label>
+            </div>
+            <div class="btn-box">
+                <input type="button" class="confirm-btn2 layer_close" value="확인">
+                <button type="button" class="cancel-btn layer_close">취소</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- //컨펌 팝업 추가 -->
+
+</body>
+</html>

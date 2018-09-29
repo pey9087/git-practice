@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+
+    <title>KID</title>
+
+    <link type="text/css" rel="stylesheet" href="../../css/jquery.mCustomScrollbar.css">
+    <link type="text/css" rel="stylesheet" href="../../css/style.css">
+
+    <script type="text/javascript" src="../../js/jquery-1.12.4.min.js"></script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 10]>
+    <script type="text/javascript" src="../../js/placeholders.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="../../js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="../../js/script.js"></script>
+</head>
+<body id="sub">
+    <div class="wrapper">
+        <header id="header">
+            <div class="box-inner">
+                <h1 class="logo"><a href="#none">KID, KT IMAGE DATASET</a></h1>
+
+                <nav class="navigation">
+                    <ul>
+                        <li><a href="#none">Image Dataset</a></li>
+                        <li class="active"><a href="#none">Annotation Tool</a></li>
+                        <li>
+                            <a href="#none">Admin</a>
+                            <ul class="sub-menu"><!-- 20180906 서브메뉴 추가 -->
+                                <li><a href="#none">이미지 데이터 관리</a></li>
+                                <li><a href="#none">항목 관리</a></li>
+                                <li><a href="#none">사용자 관리</a></li>
+                                <li><a href="#none">권한 관리</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="user-menu">
+                    <button type="button" class="user-name">User 01 <i></i></button>
+                    <ul>
+                        <li><a href="#none">My page</a></li>
+                        <li><a href="#none">Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <main id="container">
+
+            <div class="task-wrap">
+
+                <div class="task-head">
+                    <div class="box-inner">
+                        <h2 class="task-title">검수 대상 작업자 현황</h2>
+                        <p class="task-ex">검수 대상 작업자별 작업 현황을 확인하실 수 있습니다.</p>
+                    </div>
+                </div>
+
+                <div class="task-list todo-list">
+                    <div class="box-inner">
+                        <table>
+                            <colgroup>
+                                <col width="140">
+                                <col width="280">
+                                <col width="172">
+                                <col width="172">
+                                <col width="*">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">No.</th>
+                                    <th scope="col">
+                                        ID
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                    <th scope="col">To do</th>
+                                    <th scope="col">Reject</th>
+                                    <th scope="col">
+                                        미검수일 정보
+                                        <div class="sort-btn-box">
+                                            <button type="button" class="sort-up active">오름차순</button>
+                                            <button type="button" class="sort-down">내림차순</button>
+                                        </div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td><a href="../../html/annotation/worker_detail2.html">annot 01</a></td>
+                                    <td>0</td>
+                                    <td>7</td>
+                                    <td>2018.05.14 ~ 2018.05.22</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td><a href="../../html/annotation/worker_detail2.html">annot 02</a></td>
+                                    <td>0</td>
+                                    <td>7</td>
+                                    <td>2018.05.14 ~ 2018.05.22</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td><a href="../../html/annotation/worker_detail2.html">annot 03</a></td>
+                                    <td>0</td>
+                                    <td>7</td>
+                                    <td>2018.05.14 ~ 2018.05.22</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td><a href="../../html/annotation/worker_detail2.html">annot 04</a></td>
+                                    <td>0</td>
+                                    <td>7</td>
+                                    <td>2018.05.14 ~ 2018.05.22</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td><a href="../../html/annotation/worker_detail2.html">annot 05</a></td>
+                                    <td>0</td>
+                                    <td>7</td>
+                                    <td>2018.05.14 ~ 2018.05.22</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td><a href="../../html/annotation/worker_detail2.html">annot 06</a></td>
+                                    <td>0</td>
+                                    <td>7</td>
+                                    <td>2018.05.14 ~ 2018.05.22</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td><a href="../../html/annotation/worker_detail2.html">annot 07</a></td>
+                                    <td>0</td>
+                                    <td>7</td>
+                                    <td>2018.05.14 ~ 2018.05.22</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td><a href="../../html/annotation/worker_detail2.html">annot 08</a></td>
+                                    <td>0</td>
+                                    <td>7</td>
+                                    <td>2018.05.14 ~ 2018.05.22</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td><a href="../../html/annotation/worker_detail2.html">annot 09</a></td>
+                                    <td>0</td>
+                                    <td>7</td>
+                                    <td>2018.05.14 ~ 2018.05.22</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td><a href="../../html/annotation/worker_detail2.html">annot 10</a></td>
+                                    <td>0</td>
+                                    <td>7</td>
+                                    <td>2018.05.14 ~ 2018.05.22</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="paging-box">
+                            <button type="button" class="btn-paging first-page">Go to First page</button>
+                            <button type="button" class="btn-paging prev-page">Go to Prev page</button>
+                            <ul class="paging-num">
+                                <li class="active"><button type="button">1</button></li>
+                                <li><button type="button">2</button></li>
+                                <li><button type="button">3</button></li>
+                                <li><button type="button">4</button></li>
+                                <li><button type="button">5</button></li>
+                            </ul>
+                            <button type="button" class="btn-paging next-page enabled">Go to Next page</button>
+                            <button type="button" class="btn-paging last-page enabled">Go to Last page</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+        <footer id="footer">
+            <p class="company-info">
+                <span>㈜케이티 대표이사 황창규</span><span>사업자등록번호 : 102-81-42945</span><span>통신판매업신고 : 2002-경기성남-0048</span>
+            </p>
+            <address>경기도 성남시 분당구 불정로 90 (정자동)</address>
+
+            <p class="copyright">Copyrightⓒ2018 KT corp. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
